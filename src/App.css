@@ -38,7 +38,7 @@ body {
 
 /* ---- HEADER & NAVIGATION ---- */
 header {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
   color: white;
   padding: 2rem 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -76,8 +76,8 @@ nav a {
 
 nav a:hover,
 nav a:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-  outline: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: 2px solid #fbbf24;
   outline-offset: 2px;
 }
 
@@ -100,7 +100,7 @@ section h2 {
   font-size: 2rem;
   color: #1e3a8a;
   margin-bottom: 1.5rem;
-  border-bottom: 3px solid #3b82f6;
+  border-bottom: 3px solid #2563eb;
   padding-bottom: 0.5rem;
 }
 
@@ -124,7 +124,7 @@ section h2 {
 
 #hakkimda figcaption {
   font-size: 1.1rem;
-  color: #555;
+  color: #4b5563;
   margin-top: 0.5rem;
   font-weight: 600;
 }
@@ -132,7 +132,7 @@ section h2 {
 #hakkimda p {
   font-size: 1rem;
   line-height: 1.8;
-  color: #555;
+  color: #4b5563;
   margin: 1rem 0;
 }
 
@@ -144,7 +144,7 @@ section h2 {
 
 #hakkimda ul li {
   padding: 0.5rem 0;
-  color: #555;
+  color: #4b5563;
 }
 
 #hakkimda ul li strong {
@@ -153,16 +153,16 @@ section h2 {
 
 /* ---- PROJECTS SECTION ---- */
 #projeler article {
-  background-color: #f9fafb;
+  background-color: #f8f9fa;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid #2563eb;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
 
 #projeler article:hover {
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
   transform: translateX(4px);
 }
 
@@ -173,7 +173,7 @@ section h2 {
 }
 
 #projeler article p {
-  color: #666;
+  color: #4b5563;
   line-height: 1.6;
 }
 
@@ -186,7 +186,7 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #333;
+  color: #1a1a1a;
 }
 
 input,
@@ -194,19 +194,20 @@ textarea,
 select {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid #cbd5e1;
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
   transition: all 0.3s ease;
+  color: #1a1a1a;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 textarea {
@@ -215,14 +216,15 @@ textarea {
 }
 
 .error-msg {
-  color: #dc2626;
+  color: #b91c1c;
   font-size: 0.875rem;
   margin-top: 0.25rem;
+  font-weight: 500;
 }
 
 /* ---- BUTTONS ---- */
 button {
-  background-color: #3b82f6;
+  background-color: #2563eb;
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -234,9 +236,9 @@ button {
 }
 
 button:hover {
-  background-color: #2563eb;
+  background-color: #1d4ed8;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
 
 button:focus {

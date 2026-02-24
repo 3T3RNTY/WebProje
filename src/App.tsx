@@ -1,9 +1,11 @@
 import './App.css'
 
+
 function App() {
   return (
     <>
     <header>
+      
       <nav  aria-label="Ana navigasyon">
         <ul>     
           <h1>Emirhan Bayrak</h1>              
@@ -15,6 +17,7 @@ function App() {
     </header>
 
     <main id="main-content">
+      
       <section id="hakkimda">
         <h2>Hakkımda</h2>
         <figure>
