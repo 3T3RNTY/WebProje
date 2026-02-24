@@ -26,16 +26,22 @@ function App() {
           <figcaption>Emirhan Bayrak</figcaption>
         </figure>
         
-        <p>Merhaba! Ben Emirhan Bayrak, yazılım geliştirici ve teknoloji meraklısıyım.
+        <p>
+          Merhaba! Ben Emirhan Bayrak, yazılım geliştirici ve teknoloji meraklısıyım.
           Yazılım dünyasında kendi imzamı atabileceğim projeler üzerinde çalışmayı seviyorum.
-          Farklı projelerde deneyim kazanarak, her zaman öğrenmeye ve gelişmeye açık biriyim.</p>
-         
-        <ul>     
-          <li><strong>Kullandığım Teknolojiler</strong></li>
-          <li><strong>JavaScript</strong></li>
-          <li><strong>React</strong></li>
-          <li><strong>Node.js</strong></li>
-        </ul>
+          Farklı projelerde deneyim kazanarak, her zaman öğrenmeye ve gelişmeye açık biriyim.
+        </p>
+        <li><strong>Hobilerim:</strong></li>
+        <li>Bilgisayar ile uğraşmak</li>
+        <li>Müzik dinlemek</li>
+        <li>Bilgisayar oyunları oynamak</li>
+         <br />
+            
+        <li><strong>Kullandığım Teknolojiler</strong></li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        
       </section>
 
       <section id="projeler">          
