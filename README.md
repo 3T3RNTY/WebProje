@@ -23,5 +23,7 @@ npm install
 npm run dev
 ```
 
- ## Ekran Goruntusu
-https://drive.google.com/file/d/1gCwex_2zbj3B2ZehMrZvELRXAyKHlMnW/view?usp=sharing
+## Ekran Goruntusu
+
+İlk Hafta Ekran Görüntüsü: https://drive.google.com/file/d/1gCwex_2zbj3B2ZehMrZvELRXAyKHlMnW/view?usp=sharing
+İkinci Hafta Ekran Görüntüsü(Accessibility): https://drive.google.com/file/d/1UZWYnWMn_XvyfKeryPMFAyZUjO39gl8J/view?usp=sharing
