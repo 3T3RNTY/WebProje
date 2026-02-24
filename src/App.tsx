@@ -7,7 +7,7 @@ function App() {
       <h2>LAB-1</h2>
       <p>Ad Soyad: Emirhan Bayrak</p>
       <p>Numara: 230541017</p>
-      <p>Bilgisayar tutkunu - Müzik sever - Oyun bağimlisi</p>
+      <p>Bilgisayar tutkunu - Müzik sever - Oyun bağımlısı</p>
     </div>
   )
 }
