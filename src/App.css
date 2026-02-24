@@ -1,42 +1,329 @@
-#root {
-  max-width: 1280px;
+/* ============================================
+   PORTFOLIO - APP STYLES
+   ============================================ */
+
+/* ---- RESET & BASE STYLES ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+/* ---- ACCESSIBILITY ---- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #1e3a8a;
+  color: white;
+  padding: 8px 16px;
+  z-index: 100;
+  border-radius: 0 4px 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ---- HEADER & NAVIGATION ---- */
+header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  color: white;
+  padding: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+  margin-right: auto;
+  font-weight: 700;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* ---- MAIN CONTENT ---- */
+#main-content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+section {
+  background: white;
   padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 0.5rem;
+}
+
+/* ---- ABOUT SECTION ---- */
+#hakkimda figure {
   text-align: center;
+  margin: 1rem 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#hakkimda img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+#hakkimda img:hover {
+  transform: scale(1.05);
+}
+
+#hakkimda figcaption {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+#hakkimda p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin: 1rem 0;
+}
+
+#hakkimda ul {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding-left: 0;
+}
+
+#hakkimda ul li {
+  padding: 0.5rem 0;
+  color: #4b5563;
+}
+
+#hakkimda ul li strong {
+  color: #1e3a8a;
+}
+
+/* ---- PROJECTS SECTION ---- */
+#projeler article {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #2563eb;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+#projeler article:hover {
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+  transform: translateX(4px);
+}
+
+#projeler article h3 {
+  font-size: 1.3rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+#projeler article p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* ---- FORMS & INPUTS ---- */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error-msg {
+  color: #b91c1c;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* ---- BUTTONS ---- */
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+button:focus {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 2px;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ---- FOOTER ---- */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* ---- RESPONSIVE DESIGN ---- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav h1 {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  #main-content {
+    padding: 0 1rem;
+  }
+
+  #hakkimda img {
+    max-width: 150px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  header {
+    padding: 1rem 0;
+  }
 
-.read-the-docs {
-  color: #888;
+  nav h1 {
+    font-size: 1.3rem;
+  }
+
+  nav a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.3rem;
+  }
+
+  #projeler article {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
 }
