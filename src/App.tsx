@@ -1,6 +1,5 @@
 import './App.css'
 
-
 function App() {
   return (
     <>
@@ -30,39 +29,52 @@ function App() {
           Yazılım dünyasında kendi imzamı atabileceğim projeler üzerinde çalışmayı seviyorum.
           Farklı projelerde deneyim kazanarak, her zaman öğrenmeye ve gelişmeye açık biriyim.</p>
          
-        <ul>     
-          <li><strong>Kullandığım Teknolojiler</strong></li>
-          <li><strong>JavaScript</strong></li>
-          <li><strong>React</strong></li>
-          <li><strong>Node.js</strong></li>
+        <ul className="skill-tags">    
+          
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Node.js</li>
         </ul>
       </section>
 
       <section id="projeler">          
         <h2>Projelerim</h2>
-        <article>
-          <h3>Portföy Web Sitesi</h3>
-          <p>Kendi portföyümü sergilemek için geliştirdiğim kişisel web sitesi.</p>
-          <li><strong>Kullanılan Teknojiler:</strong> React + JavaScript</li>
-          <li><a href="https://github.com/3T3RNTY/WebProject">GitHub Reposu</a></li>
-        </article>
+        <div className="project-grid">
+          <article className="project-card">
+            <img src="proje1.jpg"
+                  alt="Portföy Web Sitesi anasayfa ekran goruntusu" />
+            <h3>Portföy Web Sitesi</h3>
+            <p>Kendi portföyümü sergilemek için geliştirdiğim kişisel web sitesi.</p>
+            <ul className="skill-tags">
+              <li>React</li>
+              <li>JavaScript</li>
+            </ul>
+          </article>
 
-        <article>
-          <h3>Dijital Pazarlama Sitesi</h3>
-          <p>Satıcıları ve müşterileri bir araya getiren dijital pazarlama platformu.</p>
-          <li><strong>Kullanılan Teknojiler:</strong> Java + SpringBoot</li>
-          <li><a href="https://github.com/3T3RNTY/SpringbootProjectDemo">GitHub Reposu</a></li>
-        </article>
+          <article className="project-card">
+            <img src="proje2.jpg"
+                  alt="Dijital Pazarlama Sitesi goruntusu" />
+            <h3>Dijital Pazarlama Sitesi</h3>
+            <p>Kisisel blog platformu.
+                Markdown destekli yazi editoru.</p>
+            <ul className="skill-tags">
+              <li>Java</li>
+              <li>SpringBoot</li>
+            </ul>
+          </article>
 
-        <article>
-          <h3>Market Otomasyonu</h3>
-          <p>Market ürünlerini takip eden ve stok durumunu gösteren bir otomasyon sistemi.</p>
-          <li><strong>Kullanılan Teknojiler:</strong> C# + .NET</li>
-          <li><a href="https://github.com/3T3RNTY/Automation">GitHub Reposu</a></li>
-        </article>          
+          <article className="project-card">
+            <img src="proje3.jpg"
+                alt="Market Otomasyonu arayuzu" />
+            <h3>Market Otomasyonu</h3>
+            <p>Market ürünlerini takip eden ve stok durumunu gösteren bir otomasyon sistemi.</p>
+            <ul className="skill-tags">
+              <li>C#</li>
+              <li>SQLite</li>
+              </ul>
+              </article>
+          </div>
       </section>
-
-      <br />
 
       <section id="iletisim">
         <h2>İletişim</h2>
@@ -117,6 +129,7 @@ function App() {
           </fieldset>
       </form>
     </main>
+   
 
     <a href="#main-content" className="skip-link">
         Ana içeriğe atla
