@@ -7,7 +7,7 @@
 --color-text: #1F2937;
 --color-muted: #6B7280;
 --color-surface: #F9FAFB;
---color-border: #E5E7EB;
+--color-border: #D1D5DB;
 --color-error: #DC2626;
 --color-success: #16A34A;
 
@@ -31,6 +31,7 @@
 --font-mono: 'Fira Code', 'Consolas', monospace;
 
 /*--- Font Boyutlari (Fluid)--- */
+
 /*--- Golge--- */
 --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
 --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
@@ -52,6 +53,78 @@
     color: var(--color-text);
     background-color: var(--color-bg);
  }
+h1 {
+    font-size: var(--text-3xl);
+}
+h2 {
+    font-size: var(--text-2xl);
+}
+h3 {
+    font-size: var(--text-xl);
+}
+
+
+ /* Navigasyon cubugu */
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: var(--space-sm);
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    transition: background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+ /* Mobilde dikey yigin */
+ @media (max-width: 639px) {
+    header {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav a {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Header icindeki hizalama: logo sol, nav sag */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg);
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Logo / Site adi */
+.site-title {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+
 .card {
     background: var(--color-surface);
     border: 1px solid var(--color-border);
@@ -62,4 +135,58 @@
 }
 .card:hover {
     box-shadow: var(--shadow-md);
+}
+
+.project-grid {
+     display: grid;
+    /* Sihirli satir: otomatik responsive grid! */
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+}
+
+/* ===== PROJE KARTI ===== */
+.project-card {
+display: flex;
+flex-direction: column;
+background: var(--color-surface);
+border: 1px solid var(--color-border);
+border-radius: var(--radius-md);
+overflow: hidden;
+transition: transform var(--transition-normal),
+box-shadow var(--transition-normal);
+}
+
+.project-card:hover {
+transform: translateY(-4px);
+box-shadow: var(--shadow-lg);
+}
+
+/* Kart icindeki gorsel */
+.project-card img {
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+
+/* Kart icerigi */
+.project-card h3,
+.project-card p,
+.project-card .skill-tags {
+padding: 0 var(--space-lg);
+}
+
+.project-card h3 {
+margin-top: var(--space-md);
+font-size: var(--text-lg);
+}
+
+.project-card p {
+color: var(--color-muted);
+flex-grow: 1; /* icerik farkli uzunlukta olsabile kartlarin alt kenari hizali */
+}
+
+.project-card .skill-tags {
+padding-bottom: var(--space-lg);
+margin-top: auto;
 }
