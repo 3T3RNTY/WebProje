@@ -2,6 +2,9 @@
    GLOBAL STYLES
    ============================================ */
 
+ @import './styles/tokens.css';
+
+ 
 :root {
   /* Colors */
   --primary: #1e3a8a;
@@ -61,7 +64,7 @@
 }
 
 /* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap');*/
 
 /* Base styles */
 html {
