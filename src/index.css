@@ -1,0 +1,162 @@
+@import './styles/tokens.css';
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ======================================
+   MOBIL VARSAYILAN (0 - 639px)
+   ====================================== */
+
+/* Genel sıfırlama */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text), dark;
+  background-color: var(--color-bg), dark;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Section'lar arası boşluk */
+section {
+  padding: var(--space-xl) var(--space-md);
+}
+
+/* Section başlıkları */
+section h2 {
+  font-size: var(--text-2xl);
+  color: var(--color-primary), dark;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+/* Hakkımda: tek sutun, ortalanmış */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  text-align: center;
+}
+
+.about-content figure {
+  max-width: 200px;
+}
+
+.about-content img {
+  border-radius: var(--radius-full);
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* İletişim formu */
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border), dark;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--text-base);
+  transition: border-color var(--transition-fast), dark;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary), dark;
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: var(--space-sm) var(--space-lg);
+  background: var(--color-primary), dark;
+  color: var(--color-bg), dark;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background: var(--color-secondary), dark;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  background: var(--color-surface, dark);
+  border-top: 1px solid var(--color-border), dark;
+  color: var(--color-muted), dark;
+  font-size: var(--text-sm);
+}
+
+/* ======================================
+   TABLET (640px ve üzeri)
+   ====================================== */
+@media (min-width: 640px) {
+  section {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  /* Hakkımda: yatay düzen */
+  .about-content {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .about-content figure {
+    flex-shrink: 0;
+  }
+
+  /* Form butonu tam genişlik olmaktan çıkar */
+  button[type="submit"] {
+    width: auto;
+  }
+}
+
+/* ======================================
+   MASAUSTU (1024px ve üzeri)
+   ====================================== */
+@media (min-width: 1024px) {
+  /* İçerik genişliği sınırlı */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: var(--space-3xl) var(--space-xl);
+  }
+
+  /* Proje kartları en az 3 sütun */
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
